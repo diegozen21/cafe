@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="50dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/Logo"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="55dp"
+            android:src="@drawable/logo2" />
+
+        <!-- CardView para Bebidas Calientes -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewBebidasCalientes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#D2DAE8"
+            android:layout_below="@+id/Logo"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="8dp">
+
+            <!-- Contenido de Bebidas Calientes -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bebidas Calientes"
+                android:textColor="#071B43"
+                android:textStyle="bold|normal"
+                android:textSize="18sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="8dp"
+                android:padding="10dp"/>
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- CardView para Bebidas Frías -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewBebidasFrias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#071B43"
+            android:layout_below="@+id/cardViewBebidasCalientes"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="8dp"
+            android:padding="10dp">
+
+            <!-- Contenido de Bebidas Frías -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#D2DAE8"
+                android:textStyle="bold|normal"
+                android:text="Bebidas Frías"
+                android:textSize="20sp"
+                android:layout_gravity="center_horizontal"
+                android:padding="20dp"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- CardView para Postres -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewPostres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#D2DAE8"
+            android:layout_below="@+id/cardViewBebidasFrias"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:cardCornerRadius="8dp">
+
+            <!-- Contenido de Postres -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#071B43"
+                android:textStyle="bold|normal"
+                android:text="Postres"
+                android:textSize="18sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="8dp"
+                android:padding="10dp"/>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+</ScrollView>

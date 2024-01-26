@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".DetalleBebidaFria">
+
+    <!-- Imagen de la bebida en la parte superior -->
+    <ImageView
+        android:id="@+id/imagenBebida"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!-- Tres CardViews horizontales para elegir el tamaño de la bebida -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardPequena"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/imagenBebida"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cardMediana"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintWidth_default="wrap"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintWidth_percent="0.3">
+
+        <!-- Contenido de la CardView pequeña -->
+        <!-- Puedes personalizar esto según tus necesidades -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pequeña"
+            android:textSize="18sp"
+            android:padding="8dp"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardMediana"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/imagenBebida"
+        app:layout_constraintStart_toEndOf="@+id/cardPequena"
+        app:layout_constraintEnd_toStartOf="@+id/cardGrande"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintWidth_default="wrap"
+        app:layout_constraintWidth_percent="0.3"
+        app:cardCornerRadius="8dp">
+
+        <!-- Contenido de la CardView mediana -->
+        <!-- Puedes personalizar esto según tus necesidades -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mediana"
+            android:textSize="18sp"
+            android:padding="8dp"/>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardGrande"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/imagenBebida"
+        app:layout_constraintStart_toEndOf="@+id/cardMediana"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintWidth_default="wrap"
+        app:layout_constraintWidth_percent="0.3"
+        app:cardCornerRadius="8dp">
+
+        <!-- Contenido de la CardView grande -->
+        <!-- Puedes personalizar esto según tus necesidades -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grande"
+            android:textSize="18sp"
+            android:padding="8dp"/>
+    </androidx.cardview.widget.CardView>
+
+    <!-- TextView para la descripción de la bebida -->
+    <TextView
+        android:id="@+id/descripcionTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Descripción de la bebida..."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardPequena"/>
+
+    <!-- Sección para agregar más bebidas con botones "+" y "-" -->
+    <LinearLayout
+        android:id="@+id/agregarBebidaLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descripcionTextView">
+
+        <!-- Botón de disminuir -->
+        <Button
+            android:id="@+id/botonMenos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- TextView para mostrar la cantidad de bebidas seleccionadas -->
+        <TextView
+            android:id="@+id/cantidadTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="18sp"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- Botón de aumentar -->
+        <Button
+            android:id="@+id/botonMas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"/>
+    </LinearLayout>
+
+    <!-- Botón de comprar -->
+    <Button
+        android:id="@+id/botonComprar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Comprar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/agregarBebidaLayout"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
